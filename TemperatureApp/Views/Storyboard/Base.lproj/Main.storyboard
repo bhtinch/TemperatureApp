@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z6p-if-Hxm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Temperature View Controller-->
+        <scene sceneID="RFo-HS-Pof">
+            <objects>
+                <viewController id="Z6p-if-Hxm" customClass="TemperatureViewController" customModule="TemperatureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6HM-DG-gm7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="64" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PCV-AQ-bfL">
+                                <rect key="frame" x="52" y="76" width="310.5" height="448"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsd-ld-bfi">
+                                        <rect key="frame" x="0.0" y="0.0" width="310.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="SSH-1t-ayU">
+                                        <rect key="frame" x="0.0" y="94.5" width="310.5" height="110.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Temperature in Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjG-7v-ItF">
+                                                <rect key="frame" x="33.5" y="16" width="243.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pJD-wD-Aa6">
+                                                <rect key="frame" x="120" y="60.5" width="70" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="32" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptv-bH-aiW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkB-8Y-7Od">
+                                                        <rect key="frame" x="53" y="0.0" width="17" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="fwj-bl-Dvy"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="8" bottom="16" trailing="8"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgW-Op-DvN" customClass="TempButton" customModule="TemperatureApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="267" width="310.5" height="30"/>
+                                        <state key="normal" title="Calculate"/>
+                                        <connections>
+                                            <action selector="calculateButtonTapped:" destination="Z6p-if-Hxm" eventType="touchUpInside" id="Nlt-dJ-PH1"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2Ls-GG-aOc">
+                                        <rect key="frame" x="0.0" y="359" width="310.5" height="89"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkX-BC-VRo">
+                                                <rect key="frame" x="8" y="16" width="294.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-17-KgI">
+                                                <rect key="frame" x="8" y="52.5" width="294.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRK-0a-w93">
+                                                        <rect key="frame" x="0.0" y="0.0" width="294.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="8" bottom="16" trailing="8"/>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="8Uw-f5-spK"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="O6C-cS-GMI">
+                                <rect key="frame" x="76" y="620" width="262" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsK-0d-9xy" customClass="TempButton" customModule="TemperatureApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30"/>
+                                        <state key="normal" title="Calculate °C to °F"/>
+                                        <connections>
+                                            <action selector="calcCtoFButtonTapped:" destination="Z6p-if-Hxm" eventType="touchUpInside" id="khJ-ob-vTD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBe-g6-Mli" customClass="TempButton" customModule="TemperatureApp" customModuleProvider="target">
+                                        <rect key="frame" x="139" y="0.0" width="123" height="30"/>
+                                        <state key="normal" title="Calculate °F to °C"/>
+                                        <connections>
+                                            <action selector="calcFtoCButtonTapped:" destination="Z6p-if-Hxm" eventType="touchUpInside" id="OYZ-NP-5ec"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zhb-EW-Nki"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O6C-cS-GMI" firstAttribute="top" secondItem="PCV-AQ-bfL" secondAttribute="bottom" constant="96" id="1Q0-e7-4nj"/>
+                            <constraint firstItem="PCV-AQ-bfL" firstAttribute="height" secondItem="6HM-DG-gm7" secondAttribute="height" multiplier="0.5" id="4G9-cY-Agu"/>
+                            <constraint firstItem="PCV-AQ-bfL" firstAttribute="top" secondItem="zhb-EW-Nki" secondAttribute="top" constant="32" id="64J-1f-IcQ"/>
+                            <constraint firstItem="PCV-AQ-bfL" firstAttribute="centerX" secondItem="zhb-EW-Nki" secondAttribute="centerX" id="6pa-vo-LPd"/>
+                            <constraint firstItem="PCV-AQ-bfL" firstAttribute="width" secondItem="6HM-DG-gm7" secondAttribute="width" multiplier="0.75" id="79L-Gg-GDD"/>
+                            <constraint firstItem="O6C-cS-GMI" firstAttribute="centerX" secondItem="zhb-EW-Nki" secondAttribute="centerX" id="WGa-zm-x3C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calcCtoFButton" destination="UsK-0d-9xy" id="fqm-1J-SaD"/>
+                        <outlet property="calcFtoCButton" destination="yBe-g6-Mli" id="Kr7-Mj-EUV"/>
+                        <outlet property="calculateButton" destination="MgW-Op-DvN" id="9xb-DR-ySM"/>
+                        <outlet property="instructionLabel" destination="zjG-7v-ItF" id="Fgf-JN-Hbc"/>
+                        <outlet property="resultStackView" destination="2Ls-GG-aOc" id="3CG-r4-iul"/>
+                        <outlet property="resultValueLabel" destination="MRK-0a-w93" id="n75-3H-xkp"/>
+                        <outlet property="startingStackView" destination="SSH-1t-ayU" id="qDu-7f-7sY"/>
+                        <outlet property="startingUnitLabel" destination="hkB-8Y-7Od" id="UDA-Uk-rU1"/>
+                        <outlet property="startingValueTextField" destination="ptv-bH-aiW" id="nJR-It-9ea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8b-SW-utp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594.20289855072474" y="-39.508928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
